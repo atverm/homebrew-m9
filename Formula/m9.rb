@@ -17,9 +17,7 @@ class M9 < Formula
   desc "Modula-9: a Wirth-family language for code an AI agent writes and a person audits"
   homepage "https://github.com/atverm/m9c"
   url "https://github.com/atverm/m9c/releases/download/v0.12.0/m9-0.12.0.tar.gz"
-  # filled by tools/release/mac/mactap.sh when 0.12.0 is cut; until then
-  # `brew install --HEAD atverm/m9/m9` builds the mirror's main
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "60ba49f6ed95b2434a5abfc8a4678cbfc6158f64239e3f48676273abe5a94fde"
   license "GPL-3.0-or-later"
   # the public mirror follows the private main; --HEAD builds what the
   # next release will carry
