@@ -7,13 +7,23 @@
 # chapters link; the formula names them so a program that opens an
 # https URL, reads a zarr chunk or writes a netCDF file links on the
 # first try.
+#
+# THIS FILE IS THE SOURCE of github.com/atverm/homebrew-m9's
+# Formula/m9.rb: tools/release/mac/mactap.sh fills the version and the
+# tarball's sha256 from the release tarball and writes the copy the
+# tap gets, with a receipt.  runtime/test/mactap.sh holds the tree to
+# the recipe below, step for step.
 class M9 < Formula
   desc "Modula-9: a Wirth-family language for code an AI agent writes and a person audits"
   homepage "https://github.com/atverm/m9c"
-  url "file:///private/tmp/claude-501/-Users-alex-code-m9repo/4cb38cab-9189-4ffc-bf3a-f0817879c9a6/scratchpad/tap/m9-0.12.0.tar.gz"
-  version "0.12.0"
-  sha256 "641b851f3f22f96ca70428e49df68350bec690020ae5964bf09845cae5c5094f"
+  url "https://github.com/atverm/m9c/releases/download/v0.12.0/m9-0.12.0.tar.gz"
+  # filled by tools/release/mac/mactap.sh when 0.12.0 is cut; until then
+  # `brew install --HEAD atverm/m9/m9` builds the mirror's main
+  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
   license "GPL-3.0-or-later"
+  # the public mirror follows the private main; --HEAD builds what the
+  # next release will carry
+  head "https://github.com/atverm/m9c.git", branch: "main"
 
   depends_on "gcc"
   depends_on "openssl@3"
@@ -83,6 +93,6 @@ class M9 < Formula
     EOS
     system bin/"m9c", "--make", "-o", "hello", "Hello.m9"
     assert_equal "hello from m9 on macOS\n", shell_output("./hello")
-    assert_match "m9c 0.12.0", shell_output("#{bin}/m9c --version")
+    assert_match "m9c ", shell_output("#{bin}/m9c --version")
   end
 end
