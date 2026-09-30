@@ -14,12 +14,11 @@ The gcc is the point: Apple's `cc` is clang, which takes neither
 gcc's inliner budget nor a nested function, so `m9c` on a Mac drives
 Homebrew's gcc through `$(brew --prefix m9)/gcc/bin/gcc`.
 
-Until 0.12.0 -- the first release with the macOS port -- is on the
-[release page](https://github.com/atverm/m9c/releases), the formula's
-stable version cannot be installed; build the public repository's
-`main` instead, which carries the port:
-
-    brew install --HEAD atverm/m9/m9
+The formula installs the current release from the
+[release page](https://github.com/atverm/m9c/releases) (0.12.0 is the
+first with the macOS port); `brew install --HEAD atverm/m9/m9` builds
+the public repository's `main` instead, which carries what the next
+release will.
 
 The formula's source is `tools/release/mac/m9.rb` in the private
 development tree; the copy here is written per release by its
