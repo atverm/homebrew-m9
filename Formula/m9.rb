@@ -16,8 +16,8 @@
 class M9 < Formula
   desc "Modula-9: a Wirth-family language for code an AI agent writes and a person audits"
   homepage "https://github.com/atverm/m9c"
-  url "https://github.com/atverm/m9c/releases/download/v0.16.0/m9-0.16.0.tar.gz"
-  sha256 "ace7fe3ba6260a407b48abdf264163f48bdcd3e7455b461bfe6eaec22ce05e43"
+  url "https://github.com/atverm/m9c/releases/download/v0.17.0/m9-0.17.0.tar.gz"
+  sha256 "ce1ce74bf46703e6344be85a5a2dfe5533200121dcc955faa974a9fa4162d580"
   license "GPL-3.0-or-later"
   # the public mirror follows the private main; --HEAD builds what the
   # next release will carry
