@@ -16,8 +16,8 @@
 class M9 < Formula
   desc "Modula-9: a Wirth-family language for code an AI agent writes and a person audits"
   homepage "https://github.com/atverm/m9c"
-  url "https://github.com/atverm/m9c/releases/download/v0.26.1/m9-0.26.1.tar.gz"
-  sha256 "1c017df6693262af5cf02b77c5e2273ecfbaba6d087d42bf5304f48b19fd7e19"
+  url "https://github.com/atverm/m9c/releases/download/v0.26.2/m9-0.26.2.tar.gz"
+  sha256 "8fdbef7bd8a20f0d4b55e11c98b0b627ce087f78ce48487292148a160eb75883"
   license "GPL-3.0-or-later"
   # the public mirror follows the private main; --HEAD builds what the
   # next release will carry
@@ -26,7 +26,9 @@ class M9 < Formula
   depends_on "gcc"
   depends_on "openssl@3"
   depends_on "c-blosc"
+  depends_on "libpq"
   depends_on "netcdf"
+  depends_on "zstd"
 
   def install
     gcc = Formula["gcc"]
